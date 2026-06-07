@@ -10,4 +10,7 @@ public class LibraryManager {
       members.add(new LibraryMember (102, "Sara", "Premium"));
       members.add(new LibraryMember (103, "John", "Standard"));
     }
+    public void addMember(LibraryMember member) {
+        members.add(member);
+    }
 }
