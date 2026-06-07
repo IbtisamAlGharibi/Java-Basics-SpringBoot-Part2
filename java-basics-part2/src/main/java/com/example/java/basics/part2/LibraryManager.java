@@ -13,4 +13,11 @@ public class LibraryManager {
     public void addMember(LibraryMember member) {
         members.add(member);
     }
+
+    public void displayMembers() {
+        for (LibraryMember member : members) {
+            System.out.println("ID: " + member.getMemberId() + " Name: " + member.getFullName()
+                    + " Type: " + member.getMembershipType());
+        }
+    }
 }
