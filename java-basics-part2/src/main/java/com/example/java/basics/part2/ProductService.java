@@ -13,4 +13,13 @@ public class ProductService {
         productMap.put(2, new Product(2, "Phone", 300));
         productMap.put(3, new Product(3, "Tablet", 200));
     }
+
+    private void deleteProductById(int productId){
+        if (productMap.containsKey(productId)){
+            productMap.remove(productId);
+            System.out.println(productMap.get(productId)+ " Deleted successfully");
+        }else {
+            System.out.println( "Product not found");
+        }
+    }
 }
