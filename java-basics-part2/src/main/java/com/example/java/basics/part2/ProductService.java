@@ -14,7 +14,7 @@ public class ProductService {
         productMap.put(3, new Product(3, "Tablet", 200));
     }
 
-    private void deleteProductById(int productId){
+    public void deleteProductById(int productId){
         if (productMap.containsKey(productId)){
             productMap.remove(productId);
             System.out.println(productMap.get(productId)+ " Deleted successfully");
