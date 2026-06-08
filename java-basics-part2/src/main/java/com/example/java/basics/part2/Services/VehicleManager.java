@@ -30,4 +30,11 @@ public class VehicleManager {
        vehicles.add(vehicle);
         return "Vehicle Added successfully";
     }
+
+    public void displayVehicle(){
+        System.out.println("Available Vehicles: \n");
+        for (Vehicle vehicle : vehicles){
+            System.out.println(vehicle);
+        }
+    }
 }
