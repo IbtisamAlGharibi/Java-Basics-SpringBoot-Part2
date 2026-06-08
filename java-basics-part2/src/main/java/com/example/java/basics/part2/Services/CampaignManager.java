@@ -26,7 +26,15 @@ public class CampaignManager {
         }
 
         campaigns.add(campaign);
-        return "Campaign Added successfully";
+        String result = "Campaign Id: " + campaign.getCampaignId()
+                + " Campaign Name: " + campaign.getCampaignName()
+                + " Added successfully."
+                + "\n Updated list of campaigns:\n";
+
+        for (Campaign campaignList : campaigns) {
+            result += campaignList;
+        }
+        return result;
     }
 
     public void displayCampaigns() {
