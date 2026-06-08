@@ -29,4 +29,12 @@ public class CampaignManager {
         return "Campaign Added successfully";
     }
 
+    public void displayCampaigns() {
+
+        System.out.println("Active Campaigns: \n");
+        for (Campaign campaign : campaigns) {
+            System.out.println(campaign);
+        }
+    }
+
 }
