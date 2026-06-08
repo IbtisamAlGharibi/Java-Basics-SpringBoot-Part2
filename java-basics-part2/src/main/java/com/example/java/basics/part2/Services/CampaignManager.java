@@ -14,4 +14,19 @@ public class CampaignManager {
         campaigns.add(new Campaign("C103", "Email Promo", "Email", 300));
     }
 
+    public String addCampaign(Campaign campaign) {
+
+        System.out.println("List of campaigns: ");
+
+        for (Campaign campaignList : campaigns) {
+            System.out.println(campaignList);
+            if (campaignList.getCampaignId().equalsIgnoreCase(campaign.getCampaignId())) {
+                return "Campaign already exists";
+            }
+        }
+
+        campaigns.add(campaign);
+        return "Campaign Added successfully";
+    }
+
 }
