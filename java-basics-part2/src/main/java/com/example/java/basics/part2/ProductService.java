@@ -14,12 +14,16 @@ public class ProductService {
         productMap.put(3, new Product(3, "Tablet", 200));
     }
 
-    public void deleteProductById(int productId){
+    public ProductService() {
+        loadSampleProducts();
+    }
+
+    public String deleteProductById(int productId){
         if (productMap.containsKey(productId)){
             productMap.remove(productId);
-            System.out.println(productMap.get(productId)+ " Deleted successfully");
-        }else {
-            System.out.println( "Product not found");
+            return "Deleted successfully";
+        } else {
+            return "Product not found";
         }
     }
 }
