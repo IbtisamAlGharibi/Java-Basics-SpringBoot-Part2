@@ -28,6 +28,8 @@ public class EmployeeService {
         }
         employees.add(employee);
 
-        return "Employee added successfully.";
+        return  "Employee Id: "+ employee.getEmployeeId()
+                + " Employee Name: " + employee.getEmployeeName()
+                +" Added successfully.";
     }
 }
