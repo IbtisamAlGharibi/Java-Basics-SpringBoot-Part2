@@ -1,4 +1,4 @@
-package com.example.java.basics.part2;
+package com.example.java.basics.part2.Entity;
 
 import java.util.ArrayList;
 

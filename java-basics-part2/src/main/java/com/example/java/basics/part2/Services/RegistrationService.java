@@ -1,5 +1,6 @@
-package com.example.java.basics.part2;
+package com.example.java.basics.part2.Services;
 
+import com.example.java.basics.part2.Entity.EventRegistration;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

@@ -1,5 +1,6 @@
-package com.example.java.basics.part2;
+package com.example.java.basics.part2.Controllers;
 
+import com.example.java.basics.part2.Services.RegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestBody;
