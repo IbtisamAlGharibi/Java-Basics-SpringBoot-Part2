@@ -29,6 +29,9 @@ public class RegistrationService {
                 notFoundIds.add(id);
             }
         }
-        return "Deleted IDs: " + deletedIds + " IDs not found: " + notFoundIds;
+        return "Total IDs received: " + ids.size()
+                + " Number of successfully deleted registrations: " + deletedIds.size()
+                + " Deleted IDs: " + deletedIds
+                + " IDs not found: " + notFoundIds;
     }
 }
