@@ -15,4 +15,19 @@ public class EmployeeService {
         employees.add(new Employee("E102", "Sara", "HR"));
         employees.add(new Employee("E103", "John", "Finance"));
     }
+
+    public String addEmployee(Employee employee) {
+
+        System.out.println("List of employees: ");
+        for (Employee employeeList : employees) {
+            System.out.println(employeeList);
+
+            if (employeeList.getEmployeeId().equalsIgnoreCase(employee.getEmployeeId())) {
+                return "Employee ID already exists";
+            }
+        }
+        employees.add(employee);
+
+        return "Employee added successfully.";
+    }
 }
