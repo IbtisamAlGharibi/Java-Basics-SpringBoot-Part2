@@ -27,9 +27,14 @@ public class EmployeeService {
             }
         }
         employees.add(employee);
-
-        return  "Employee Id: "+ employee.getEmployeeId()
+        String result = "Employee Id: " + employee.getEmployeeId()
                 + " Employee Name: " + employee.getEmployeeName()
-                +" Added successfully.";
+                + " Added successfully."
+                + "\n Updated list of employees:\n";
+
+        for (Employee employeeList : employees) {
+            result += employeeList;
+        }
+        return result;
     }
 }
