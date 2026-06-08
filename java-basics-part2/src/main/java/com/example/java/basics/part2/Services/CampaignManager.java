@@ -1,10 +1,12 @@
 package com.example.java.basics.part2.Services;
 
 import com.example.java.basics.part2.Entity.Campaign;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class CampaignManager {
     List<Campaign> campaigns = new ArrayList<>();
 
