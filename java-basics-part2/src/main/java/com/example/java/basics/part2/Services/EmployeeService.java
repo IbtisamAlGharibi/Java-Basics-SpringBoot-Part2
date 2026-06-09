@@ -1,6 +1,8 @@
 package com.example.java.basics.part2.Services;
 
 import com.example.java.basics.part2.Entity.Employee;
+import com.example.java.basics.part2.Inferfaces.EmployeeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -8,7 +10,15 @@ import java.util.List;
 
 @Service
 public class EmployeeService {
-    List<Employee> employees = new ArrayList<>();
+    @Autowired
+    EmployeeRepository employeeRepository;
+
+    public Employee saveEmployee(Employee employee){
+
+        return employeeRepository.save(employee);
+    }
+
+   /* List<Employee> employees = new ArrayList<>();
 
     public EmployeeService() {
         employees.add(new Employee("E101", "Ahmed", "IT"));
@@ -36,5 +46,5 @@ public class EmployeeService {
             result += employeeList;
         }
         return result;
-    }
+    }*/
 }
