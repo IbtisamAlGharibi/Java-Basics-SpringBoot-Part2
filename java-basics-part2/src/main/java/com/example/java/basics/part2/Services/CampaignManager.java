@@ -28,6 +28,14 @@ public class CampaignManager {
         return campaignRepository.save(campaign);
     }
 
+    public String deleteCampaign(String id) {
+        if (!campaignRepository.existsById(id)) {
+            return "ID NOT FOUND";
+        }
+        campaignRepository.deleteById(id);
+        return "DELETED";
+    }
+
     /*
     List<Campaign> campaigns = new ArrayList<>();
 
