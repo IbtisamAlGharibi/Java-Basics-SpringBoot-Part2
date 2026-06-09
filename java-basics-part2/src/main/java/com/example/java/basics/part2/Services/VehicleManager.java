@@ -30,6 +30,13 @@ public class VehicleManager {
         return vehicleRepository.save(vehicle);
     }
 
+    public String deleteVehicle(String id) {
+        if (!vehicleRepository.existsById(id)) {
+            return "ID NOT FOUND";
+        }
+        vehicleRepository.deleteById(id);
+        return "DELETED";
+    }
 
     /*
     List<Vehicle> vehicles = new ArrayList<>();
