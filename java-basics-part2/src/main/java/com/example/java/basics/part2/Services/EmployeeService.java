@@ -24,6 +24,8 @@ public class EmployeeService {
         if (!employee.getEmployeeName().equals(name)) {
             employee.setEmployeeName(name);
         }
+        return employeeRepository.save(employee);
+    }
 
 
    /* List<Employee> employees = new ArrayList<>();
