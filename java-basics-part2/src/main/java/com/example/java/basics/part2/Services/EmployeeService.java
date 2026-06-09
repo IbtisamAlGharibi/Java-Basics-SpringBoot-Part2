@@ -27,6 +27,14 @@ public class EmployeeService {
         return employeeRepository.save(employee);
     }
 
+    public String deleteEmployee(String id) {
+        if (!employeeRepository.existsById(id)) {
+            return "ID NOT FOUND";
+        }
+        employeeRepository.deleteById(id);
+        return "DELETED";
+    }
+
 
    /* List<Employee> employees = new ArrayList<>();
 
