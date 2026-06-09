@@ -38,6 +38,14 @@ public class VehicleManager {
         return "DELETED";
     }
 
+    public List<Vehicle> getAllVehicles() {
+        return vehicleRepository.findAll();
+    }
+
+    public Vehicle getById(String id) {
+        return vehicleRepository.findById(id).get();
+    }
+
     /*
     List<Vehicle> vehicles = new ArrayList<>();
 
