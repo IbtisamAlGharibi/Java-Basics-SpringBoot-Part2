@@ -14,7 +14,7 @@ import lombok.Setter;
 @Table(name = "Campaign")
 public class Campaign {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String campaignId;
 
     private String campaignName;
