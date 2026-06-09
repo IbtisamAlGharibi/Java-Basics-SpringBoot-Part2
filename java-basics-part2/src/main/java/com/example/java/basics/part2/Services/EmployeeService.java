@@ -35,6 +35,14 @@ public class EmployeeService {
         return "DELETED";
     }
 
+    public List<Employee> getAllEmployees() {
+        return employeeRepository.findAll();
+    }
+
+    public Employee getById(String id) {
+        return employeeRepository.findById(id).get();
+    }
+
 
    /* List<Employee> employees = new ArrayList<>();
 
