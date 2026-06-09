@@ -35,6 +35,13 @@ public class CampaignManager {
         campaignRepository.deleteById(id);
         return "DELETED";
     }
+    public List<Campaign> getAllCampaigns() {
+        return campaignRepository.findAll();
+    }
+
+    public Campaign getById(String id) {
+        return campaignRepository.findById(id).get();
+    }
 
     /*
     List<Campaign> campaigns = new ArrayList<>();
