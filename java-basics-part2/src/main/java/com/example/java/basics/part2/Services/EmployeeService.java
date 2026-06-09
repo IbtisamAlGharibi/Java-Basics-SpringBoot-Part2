@@ -18,6 +18,14 @@ public class EmployeeService {
         return employeeRepository.save(employee);
     }
 
+    public Employee updateEmployee(String id, String name) {
+
+        Employee employee = employeeRepository.findById(id).get();
+        if (!employee.getEmployeeName().equals(name)) {
+            employee.setEmployeeName(name);
+        }
+
+
    /* List<Employee> employees = new ArrayList<>();
 
     public EmployeeService() {
