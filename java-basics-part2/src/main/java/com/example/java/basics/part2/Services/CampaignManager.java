@@ -17,6 +17,17 @@ public class CampaignManager {
         return campaignRepository.save(campaign);
     }
 
+    public Campaign updateCampaign(String id,String campaignName) {
+
+        Campaign campaign = campaignRepository.findById(id).get();
+        if (!campaign.getCampaignName().equals(campaignName)) {
+            campaign.setCampaignName(campaignName);
+            System.out.println("Updated");
+        }
+        System.out.println("Already match");
+        return campaignRepository.save(campaign);
+    }
+
     /*
     List<Campaign> campaigns = new ArrayList<>();
 
