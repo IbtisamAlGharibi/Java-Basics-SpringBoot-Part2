@@ -19,6 +19,18 @@ public class VehicleManager {
         return vehicleRepository.save(vehicle);
     }
 
+    public Vehicle updateVehicle(String id,String vehicleModel) {
+        Vehicle vehicle = vehicleRepository.findById(id).get();
+
+        if (!vehicle.getVehicleModel().equals(vehicleModel)) {
+            vehicle.setVehicleModel(vehicleModel);
+            System.out.println("Updated");
+        }
+        System.out.println("Already match");
+        return vehicleRepository.save(vehicle);
+    }
+
+
     /*
     List<Vehicle> vehicles = new ArrayList<>();
 
