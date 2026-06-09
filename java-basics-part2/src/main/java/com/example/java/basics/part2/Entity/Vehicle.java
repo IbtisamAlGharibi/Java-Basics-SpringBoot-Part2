@@ -12,7 +12,7 @@ import lombok.Setter;
 @Table(name = "Vehicle")
 public class Vehicle {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String vehicleId;
 
     private String vehicleModel;
