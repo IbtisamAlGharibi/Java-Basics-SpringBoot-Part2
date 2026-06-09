@@ -2,6 +2,8 @@ package com.example.java.basics.part2.Services;
 
 import com.example.java.basics.part2.Entity.Employee;
 import com.example.java.basics.part2.Entity.Vehicle;
+import com.example.java.basics.part2.Inferfaces.VehicleRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -9,6 +11,15 @@ import java.util.List;
 
 @Service
 public class VehicleManager {
+
+    @Autowired
+    VehicleRepository vehicleRepository;
+
+    public Vehicle saveVehicle(Vehicle vehicle) {
+        return vehicleRepository.save(vehicle);
+    }
+
+    /*
     List<Vehicle> vehicles = new ArrayList<>();
 
     public VehicleManager() {
@@ -36,5 +47,5 @@ public class VehicleManager {
         for (Vehicle vehicle : vehicles){
             System.out.println(vehicle);
         }
-    }
+    }*/
 }
