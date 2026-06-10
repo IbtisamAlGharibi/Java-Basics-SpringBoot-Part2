@@ -34,4 +34,8 @@ public class CampaignController {
     public Campaign updateCampaign(@RequestBody String id, String name) throws Exception {
         return campaignManager.updateCampaign(id,name);
     }
+    @DeleteMapping("deleteById")
+    public Boolean deleteById(@RequestParam Integer id) {
+        return campaignManager.deleteById(id);
+    }
 }
