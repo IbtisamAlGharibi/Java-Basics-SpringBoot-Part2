@@ -2,6 +2,7 @@ package com.example.java.basics.part2.Controllers;
 
 import com.example.java.basics.part2.Entity.Vehicle;
 import com.example.java.basics.part2.Services.VehicleManager;
+import org.hibernate.type.descriptor.java.VersionJavaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,5 +29,9 @@ public class VehicleController {
     @GetMapping("getByModel")
     public Vehicle getByModel(@RequestParam String model) {
         return vehicleManager.getByModel(model);
+    }
+    @PutMapping("update")
+    public Vehicle updateVehicle(@RequestBody String id, String model) throws Exception {
+        return vehicleManager.updateVehicle(id,model);
     }
 }
