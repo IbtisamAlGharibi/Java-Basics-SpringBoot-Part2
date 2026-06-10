@@ -48,11 +48,11 @@ public class EmployeeService {
     }
 
     public List<Employee> getAllEmployees() {
-        return employeeRepository.findAll();
+        return employeeRepository.getAllEmployees();
     }
 
     public Employee getById(String id) {
-        return employeeRepository.findById(id).get();
+        return employeeRepository.getEmployeeById(Integer.valueOf(id));
     }
 
 
