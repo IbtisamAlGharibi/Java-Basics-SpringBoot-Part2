@@ -13,8 +13,8 @@ public class VehicleController {
     VehicleManager vehicleManager;
 
 
-    @PostMapping("/add")
+  /*  @PostMapping("/add")
     public String addVehicle(@RequestBody Vehicle vehicle) {
         return vehicleManager.addVehicle(vehicle);
-    }
+    }*/
 }

@@ -5,7 +5,6 @@ import com.example.java.basics.part2.Inferfaces.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -16,6 +15,16 @@ public class EmployeeService {
     public Employee saveEmployee(Employee employee){
 
         return employeeRepository.save(employee);
+    }
+    public Employee addEmployee(Employee newEmployee){
+        Employee employeeToAdd = new Employee();
+
+        employeeToAdd.setEmployeeId(newEmployee.getEmployeeId());
+        employeeToAdd.setEmployeeName(newEmployee.getEmployeeName());
+        employeeToAdd.setDepartment(newEmployee.getDepartment());
+        employeeToAdd.setActive(newEmployee.isActive());
+
+        return employeeRepository.save(employeeToAdd);
     }
 
     public Employee updateEmployee(String id, String name) {
