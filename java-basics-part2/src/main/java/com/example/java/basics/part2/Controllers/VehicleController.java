@@ -34,4 +34,8 @@ public class VehicleController {
     public Vehicle updateVehicle(@RequestBody String id, String model) throws Exception {
         return vehicleManager.updateVehicle(id,model);
     }
+    @DeleteMapping("deleteById")
+    public Boolean deleteById(@RequestParam Integer id) {
+        return Boolean.valueOf(vehicleManager.deleteVehicle(String.valueOf(id)));
+    }
 }
