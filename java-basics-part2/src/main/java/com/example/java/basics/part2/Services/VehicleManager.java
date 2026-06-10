@@ -1,12 +1,10 @@
 package com.example.java.basics.part2.Services;
 
-import com.example.java.basics.part2.Entity.Employee;
 import com.example.java.basics.part2.Entity.Vehicle;
 import com.example.java.basics.part2.Inferfaces.VehicleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -15,6 +13,16 @@ public class VehicleManager {
     @Autowired
     VehicleRepository vehicleRepository;
 
+    public Vehicle addVehicle(Vehicle newVehicle){
+        Vehicle vehicleToAdd = new Vehicle();
+
+        vehicleToAdd.setVehicleId(newVehicle.getVehicleId());
+        vehicleToAdd.setVehicleModel(newVehicle.getVehicleModel());
+        vehicleToAdd.setRentalPricePerDay(newVehicle.getRentalPricePerDay());
+        vehicleToAdd.setActive(newVehicle.isActive());
+
+        return vehicleRepository.save(vehicleToAdd);
+    }
     public Vehicle saveVehicle(Vehicle vehicle) {
         return vehicleRepository.save(vehicle);
     }
