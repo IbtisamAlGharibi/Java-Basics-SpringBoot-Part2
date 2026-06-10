@@ -6,6 +6,8 @@ import com.example.java.basics.part2.Services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class EmployeeController {
     @Autowired
@@ -14,5 +16,9 @@ public class EmployeeController {
   @PostMapping("/employees")
     public Employee addEmployee(@RequestBody Employee employee) {
         return employeeService.addEmployee(employee);
+    }
+    @GetMapping("/getAll")
+    public List<Employee> getAll() {
+        return employeeService.getAllEmployees();
     }
 }
