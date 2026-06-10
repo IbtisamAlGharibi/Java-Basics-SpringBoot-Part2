@@ -12,9 +12,9 @@ public class CampaignController {
     @Autowired
     CampaignManager campaignManager;
 
-    /*@PostMapping("/addCampaign")
-    public String addCampaign(@RequestBody Campaign campaign) {
+    @PostMapping("/addCampaign")
+    public Campaign addCampaign(@RequestBody Campaign campaign) {
         return campaignManager.addCampaign(campaign);
-    }*/
+    }
 
 }
