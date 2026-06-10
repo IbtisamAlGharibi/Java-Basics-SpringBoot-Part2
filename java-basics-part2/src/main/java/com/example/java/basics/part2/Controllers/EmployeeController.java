@@ -30,4 +30,8 @@ public class EmployeeController {
     public Employee updateEmployee(@RequestBody String id, @RequestParam String name) {
         return employeeService.updateEmployee(id, name);
     }
+    @DeleteMapping("/deleteById")
+    public Boolean deleteById(@RequestParam Integer id) {
+        return employeeService.deleteById(id);
+    }
 }
