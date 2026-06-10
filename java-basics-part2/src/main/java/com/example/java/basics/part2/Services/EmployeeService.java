@@ -36,12 +36,15 @@ public class EmployeeService {
         return employeeRepository.save(employee);
     }
 
-    public String deleteEmployee(String id) {
-        if (!employeeRepository.existsById(id)) {
-            return "ID NOT FOUND";
+    public Boolean deleteById(Integer id) {
+        Employee employee = employeeRepository.getEmployeeById(id);
+        if (employee != null) {
+            employee.setActive(false);
+            employeeRepository.save(employee);
+            return true;
+        } else {
+            return false;
         }
-        employeeRepository.deleteById(id);
-        return "DELETED";
     }
 
     public List<Employee> getAllEmployees() {
