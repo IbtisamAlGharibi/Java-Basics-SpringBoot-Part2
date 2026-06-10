@@ -17,5 +17,6 @@ public class Vehicle {
 
     private String vehicleModel;
     private int rentalPricePerDay;
+    private boolean isActive;
 
 }
