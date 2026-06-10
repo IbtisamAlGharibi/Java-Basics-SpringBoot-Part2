@@ -21,4 +21,8 @@ public class EmployeeController {
     public List<Employee> getAll() {
         return employeeService.getAllEmployees();
     }
+    @GetMapping("/getById")
+    public Employee getById(@RequestParam Integer id) {
+        return employeeService.getById(String.valueOf(id));
+    }
 }
