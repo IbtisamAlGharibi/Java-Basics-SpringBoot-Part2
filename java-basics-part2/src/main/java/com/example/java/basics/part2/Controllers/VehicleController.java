@@ -25,4 +25,8 @@ public class VehicleController {
     public Vehicle getById(@RequestParam Integer id) {
         return vehicleManager.getById(String.valueOf(id));
     }
+    @GetMapping("getByModel")
+    public Vehicle getByModel(@RequestParam String model) {
+        return vehicleManager.getByModel(model);
+    }
 }
