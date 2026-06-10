@@ -54,7 +54,9 @@ public class CampaignManager {
     public Campaign getById(String id) {
         return campaignRepository.getCampaignById(Integer.valueOf(id));
     }
-
+    public Campaign getByName(String name){
+        return campaignRepository.getCampaignByName(name);
+    }
     /*
     List<Campaign> campaigns = new ArrayList<>();
 
