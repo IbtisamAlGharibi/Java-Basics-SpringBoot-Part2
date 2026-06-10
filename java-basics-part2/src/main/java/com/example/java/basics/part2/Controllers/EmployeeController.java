@@ -25,4 +25,9 @@ public class EmployeeController {
     public Employee getById(@RequestParam Integer id) {
         return employeeService.getById(String.valueOf(id));
     }
+
+    @PutMapping("/update")
+    public Employee updateEmployee(@RequestBody String id, @RequestParam String name) {
+        return employeeService.updateEmployee(id, name);
+    }
 }
