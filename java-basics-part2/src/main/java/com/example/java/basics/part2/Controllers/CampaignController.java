@@ -4,10 +4,7 @@ import com.example.java.basics.part2.Entity.Campaign;
 import com.example.java.basics.part2.Entity.Vehicle;
 import com.example.java.basics.part2.Services.CampaignManager;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,5 +21,9 @@ public class CampaignController {
     public List<Campaign> getAll() {
         return campaignManager.getAllCampaigns();
 
+    }
+    @GetMapping("getById")
+    public Campaign getById(@RequestParam Integer id) {
+        return campaignManager.getById(String.valueOf(id));
     }
 }
