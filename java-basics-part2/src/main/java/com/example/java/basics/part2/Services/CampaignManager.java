@@ -47,6 +47,16 @@ public class CampaignManager {
         campaignRepository.deleteById(id);
         return "DELETED";
     }
+    public Boolean deleteById(Integer id) {
+        Campaign campaign = campaignRepository.getCampaignById(id);
+        if (campaign != null) {
+            campaign.setActive(false);
+            campaignRepository.save(campaign);
+            return true;
+        } else {
+            return false;
+        }
+    }
     public List<Campaign> getAllCampaigns() {
         return campaignRepository.getAllCampaign();
     }
