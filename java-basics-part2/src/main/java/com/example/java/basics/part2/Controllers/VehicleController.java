@@ -3,10 +3,7 @@ package com.example.java.basics.part2.Controllers;
 import com.example.java.basics.part2.Entity.Vehicle;
 import com.example.java.basics.part2.Services.VehicleManager;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,5 +20,9 @@ public class VehicleController {
     @GetMapping("getAll")
     public List<Vehicle> getAll() {
         return vehicleManager.getAllVehicles();
+    }
+    @GetMapping("getById")
+    public Vehicle getById(@RequestParam Integer id) {
+        return vehicleManager.getById(String.valueOf(id));
     }
 }
