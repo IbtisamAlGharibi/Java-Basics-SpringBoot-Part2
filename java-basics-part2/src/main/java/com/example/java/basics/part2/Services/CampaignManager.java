@@ -1,6 +1,7 @@
 package com.example.java.basics.part2.Services;
 
 import com.example.java.basics.part2.Entity.Campaign;
+import com.example.java.basics.part2.Entity.Employee;
 import com.example.java.basics.part2.Inferfaces.CampaignRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,17 @@ public class CampaignManager {
     @Autowired
     CampaignRepository campaignRepository;
 
+    public Campaign addCampaign(Campaign newCampaign){
+       Campaign campaignToAdd = new Campaign();
+
+       campaignToAdd.setCampaignId(newCampaign.getCampaignId());
+       campaignToAdd.setCampaignName(newCampaign.getCampaignName());
+       campaignToAdd.setBudget(newCampaign.getBudget());
+       campaignToAdd.setPlatform(newCampaign.getPlatform());
+       campaignToAdd.setActive(newCampaign.isActive());
+
+        return campaignRepository.save(campaignToAdd);
+    }
     public Campaign saveCampaign(Campaign campaign) {
         return campaignRepository.save(campaign);
     }
