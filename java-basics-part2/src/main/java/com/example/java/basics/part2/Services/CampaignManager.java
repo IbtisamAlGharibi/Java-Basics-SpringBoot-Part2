@@ -48,7 +48,7 @@ public class CampaignManager {
         return "DELETED";
     }
     public List<Campaign> getAllCampaigns() {
-        return campaignRepository.findAll();
+        return campaignRepository.getAllCampaign();
     }
 
     public Campaign getById(String id) {
