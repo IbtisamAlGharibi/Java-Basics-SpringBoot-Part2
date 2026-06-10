@@ -52,7 +52,7 @@ public class CampaignManager {
     }
 
     public Campaign getById(String id) {
-        return campaignRepository.findById(id).get();
+        return campaignRepository.getCampaignById(Integer.valueOf(id));
     }
 
     /*
