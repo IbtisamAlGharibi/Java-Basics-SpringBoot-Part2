@@ -30,4 +30,8 @@ public class CampaignController {
     public Campaign getByName(@RequestParam String name) {
         return campaignManager.getByName(name) ;
     }
+    @PutMapping("update")
+    public Campaign updateCampaign(@RequestBody String id, String name) throws Exception {
+        return campaignManager.updateCampaign(id,name);
+    }
 }
