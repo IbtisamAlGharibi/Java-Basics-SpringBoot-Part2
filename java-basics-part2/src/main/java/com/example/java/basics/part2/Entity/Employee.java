@@ -28,6 +28,7 @@ public class Employee {
 
     private String employeeName;
     private String department;
+    private boolean isActive;
     @OneToMany
     List<Campaign> campaigns;
     @OneToMany
