@@ -47,11 +47,14 @@ public class VehicleManager {
     }
 
     public List<Vehicle> getAllVehicles() {
-        return vehicleRepository.findAll();
+        return vehicleRepository.getAllVehicles();
     }
 
     public Vehicle getById(String id) {
-        return vehicleRepository.findById(id).get();
+        return vehicleRepository.getVehicleById(Integer.valueOf(id));
+    }
+    public Vehicle getByModel(String model){
+        return vehicleRepository.getVehicleByModel(model);
     }
 
     /*
