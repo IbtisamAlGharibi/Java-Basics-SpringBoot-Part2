@@ -26,4 +26,8 @@ public class CampaignController {
     public Campaign getById(@RequestParam Integer id) {
         return campaignManager.getById(String.valueOf(id));
     }
+    @GetMapping("getByName")
+    public Campaign getByName(@RequestParam String name) {
+        return campaignManager.getByName(name) ;
+    }
 }

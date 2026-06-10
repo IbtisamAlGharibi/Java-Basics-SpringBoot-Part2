@@ -1,11 +1,10 @@
 package com.example.java.basics.part2.Controllers;
 
+import com.example.java.basics.part2.Entity.Campaign;
 import com.example.java.basics.part2.Entity.Employee;
 import com.example.java.basics.part2.Services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class EmployeeController {
