@@ -20,4 +20,5 @@ public class Campaign {
     private String campaignName;
     private String platform;
     private int budget;
+    private boolean isActive;
 }
